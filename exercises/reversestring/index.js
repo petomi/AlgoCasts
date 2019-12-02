@@ -27,9 +27,7 @@ function reverse(str) {
 // // solution #3
 // function reverse3(str) {
 //     // ES5.1 reduce method -> reduce array to a single object (reversed), iterating over piece (character), into empty string
-//     return str.split('').reduce((reversed, character) => {
-//         return character + reversed;
-//     }, '');
+//     return str.split('').reduce((rev, char) => char + rev, '');
 // }
 
 module.exports = reverse;
