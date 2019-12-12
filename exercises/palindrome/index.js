@@ -12,4 +12,13 @@ function palindrome(str) {
     return reverse === str;
 }
 
+// //// SOLUTION 2:
+// function palindrome2(str) {
+//     // if any function within the "every" returns false, the "every" function returns false
+//     // this is not as fast because you will compare each value twice
+//     return str.split('').every((char, index) => {
+//         return char === str[str.length - 1 - i];
+//     });
+// }
+
 module.exports = palindrome;
