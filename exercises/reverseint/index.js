@@ -9,14 +9,7 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-    var stringVer = n.toString()
-    var isNegative = false
-    if (stringVer[0] === '-') {
-        isNegative = true
-        stringVer = stringVer.substring(1)
-    }
-    var reversedString = Array.from(stringVer).reverse().join('')
-    return isNegative ? parseInt(-reversedString, 10) : parseInt(reversedString, 10)
+    return parseInt(n.toString().split('').reverse().join(''), 10) * Math.sign(n)
 }
 
 module.exports = reverseInt;
